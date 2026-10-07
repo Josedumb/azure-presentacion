@@ -1,0 +1,40 @@
+/* =========================================================
+   TOKENS DE DISEÑO
+   Aquí vive TODO el estilo visual (colores, fuentes, radios).
+   Para aplicar un estilo de styles.refero.design, copia los
+   valores de su DESIGN.md en estas variables. styles.css no
+   necesita cambiarse.
+   Estilo actual: "dark devtool" con acento azul Azure.
+   ========================================================= */
+:root {
+    /* Fondos */
+    --fondo:            #08090c;
+    --fondo-elevado:    #0f1116;
+    --superficie:       #14171e;
+    --borde:            #22262f;
+    --borde-fuerte:     #2f3440;
+
+    /* Texto */
+    --texto:            #eceef2;
+    --texto-suave:      #9aa1ad;
+    --texto-tenue:      #626a78;
+
+    /* Acento (azul Azure) */
+    --acento:           #3b9cff;
+    --acento-fuerte:    #0078d4;
+    --acento-suave:     rgba(59, 156, 255, 0.12);
+    --exito:            #3ecf8e;
+    --peligro:          #f26d6d;
+
+    /* Tipografía */
+    --fuente:           'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --fuente-mono:      'JetBrains Mono', ui-monospace, Consolas, monospace;
+    --peso-titulo:      600;
+    --tracking-titulo:  -0.03em;
+
+    /* Forma y espacio */
+    --radio:            12px;
+    --radio-chico:      8px;
+    --ancho-max:        1120px;
+    --sombra:           0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 24px rgba(0,0,0,0.35);
+}

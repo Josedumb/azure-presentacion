@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tokens.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=<?= filemtime(__DIR__ . '/../assets/css/styles.css') ?>">
 </head>
 <body>
     <?php vista('nav', ['c' => $c]); ?>
@@ -24,6 +24,6 @@
         <?php vista('demo',      ['s' => $c['demo'], 'servidor' => $servidor]); ?>
     </main>
     <?php vista('footer', ['c' => $c]); ?>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=<?= filemtime(__DIR__ . '/../assets/js/main.js') ?>" defer></script>
 </body>
 </html>

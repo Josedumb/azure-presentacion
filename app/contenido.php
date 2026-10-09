@@ -64,6 +64,22 @@ return [
             ['paso' => '[04. Registro ACR]  ', 'estado' => '✔ SEGURO  ', 'detalle' => 'Azure Container Registry — Almacenamiento seguro de imágenes'],
             ['paso' => '[05. CD a la Nube]  ', 'estado' => '✔ EN VIVO ', 'detalle' => 'Despliegue automatizado hacia Azure App Service / AKS'],
         ],
+        'simulador' => [
+            'titulo' => 'Simulador en vivo: Ciclo de vida y despliegue automatizado',
+            'subtitulo' => 'Escribe un cambio o selecciona un commit para ver cómo se orquesta la compilación, pruebas y entrega continua hacia Azure.',
+            'presets' => [
+                'feat: se crea vista de cicd y simulador interactivo',
+                'fix: optimización de tiempos de respuesta en App Service',
+                'refactor: actualización de imagen Docker en Azure Container Registry',
+            ],
+            'etapas' => [
+                ['id' => 'step-repo',   'num' => '01', 'nombre' => 'Git Push',      'sub' => 'Azure Repos'],
+                ['id' => 'step-ci',     'num' => '02', 'nombre' => 'CI & Pruebas',  'sub' => 'Azure Pipelines'],
+                ['id' => 'step-docker', 'num' => '03', 'nombre' => 'Docker Build',  'sub' => 'Empaquetado'],
+                ['id' => 'step-acr',    'num' => '04', 'nombre' => 'Push a ACR',    'sub' => 'Registro seguro'],
+                ['id' => 'step-cd',     'num' => '05', 'nombre' => 'CD en Nube',    'sub' => 'App Service Live'],
+            ],
+        ],
     ],
 
     'modelos' => [

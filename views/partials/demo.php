@@ -1,6 +1,6 @@
 <section id="demo" class="seccion revelar">
     <div class="contenedor">
-        <p class="seccion__num">05</p>
+        <p class="seccion__num">06</p>
         <h2 class="seccion__titulo"><?= e($s['titulo']) ?></h2>
         <p class="seccion__lead"><?= e($s['texto']) ?></p>
 

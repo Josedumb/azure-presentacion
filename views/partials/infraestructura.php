@@ -1,7 +1,8 @@
-<section id="servicios" class="seccion revelar">
+<section id="infraestructura" class="seccion revelar">
     <div class="contenedor">
-        <p class="seccion__num">04</p>
+        <p class="seccion__num">02</p>
         <h2 class="seccion__titulo"><?= e($s['titulo']) ?></h2>
+        <p class="seccion__lead"><?= e($s['texto']) ?></p>
 
         <div class="rejilla rejilla--4">
             <?php foreach ($s['items'] as $sv): ?>

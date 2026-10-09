@@ -32,6 +32,40 @@ return [
         ],
     ],
 
+    'devops' => [
+        'titulo' => 'Cultura DevOps y CI/CD: Conectando el código con la nube',
+        'texto'  => 'DevOps conecta el código con la infraestructura en la nube. Permite orquestar todo el ciclo de vida del software: desde la gestión de proyectos con Azure DevOps, la creación de pipelines automatizados para compilación y pruebas continuas, hasta el almacenamiento seguro de imágenes en Azure Container Registry y su despliegue.',
+        'items'  => [
+            [
+                'categoria' => 'Gestión de proyectos (ALM)',
+                'nombre'    => 'Azure DevOps',
+                'texto'     => 'Orquesta el ciclo de vida del software con Azure Boards para tableros ágiles y Azure Repos para control de versiones Git colaborativo y trazable.',
+            ],
+            [
+                'categoria' => 'Integración Continua (CI)',
+                'nombre'    => 'Pipelines Automatizados',
+                'texto'     => 'Compilación automática y ejecución de pruebas unitarias ante cada cambio de código, garantizando calidad antes del despliegue.',
+            ],
+            [
+                'categoria' => 'Almacenamiento Seguro',
+                'nombre'    => 'Azure Container Registry',
+                'texto'     => 'Registro privado (ACR) para almacenar, versionar y escanear imágenes de contenedores Docker de forma segura para App Service y AKS.',
+            ],
+            [
+                'categoria' => 'Entrega Continua (CD)',
+                'nombre'    => 'Despliegue a la Nube',
+                'texto'     => 'Conecta el código validado con la nube desplegando automáticamente a producción sin caídas de servicio ni intervención manual.',
+            ],
+        ],
+        'pipeline' => [
+            ['paso' => '[01. Plan & Repos]  ', 'estado' => '✔ OK      ', 'detalle' => 'Azure Boards & Git Repos — Gestión ágil y código versionado'],
+            ['paso' => '[02. Build & Test]  ', 'estado' => '✔ PASADO  ', 'detalle' => 'Azure Pipelines — Compilación y pruebas unitarias continuas'],
+            ['paso' => '[03. Imagen Docker] ', 'estado' => '✔ CREADA  ', 'detalle' => 'Docker Build — Empaquetado portátil de la aplicación'],
+            ['paso' => '[04. Registro ACR]  ', 'estado' => '✔ SEGURO  ', 'detalle' => 'Azure Container Registry — Almacenamiento seguro de imágenes'],
+            ['paso' => '[05. CD a la Nube]  ', 'estado' => '✔ EN VIVO ', 'detalle' => 'Despliegue automatizado hacia Azure App Service / AKS'],
+        ],
+    ],
+
     'modelos' => [
         'titulo' => 'Modelos de servicio',
         'items'  => [
@@ -100,6 +134,6 @@ return [
 
     'equipo' => [
         'Jose Aguilar',
-        'Compañero',
+        'Fernando López Orellana',
     ],
 ];

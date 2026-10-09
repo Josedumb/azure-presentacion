@@ -150,6 +150,7 @@ a { color: inherit; text-decoration: none; }
 .terminal__cuerpo { padding: 20px 24px; font-family: var(--fuente-mono); font-size: 14px; line-height: 1.9; overflow-x: auto; }
 .t-clave { color: var(--acento); }
 .t-valor { color: var(--texto); }
+.t-exito { color: var(--exito); font-weight: 500; }
 
 /* ---------- Pie ---------- */
 .pie { padding: 40px 0; font-size: 13px; color: var(--texto-tenue); }

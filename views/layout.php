@@ -15,12 +15,12 @@
     <?php vista('nav', ['c' => $c]); ?>
     <main>
         <?php vista('hero',      ['c' => $c, 'servidor' => $servidor]); ?>
-        <?php vista('que-es',    ['s' => $c['que_es']]); ?>
-        <?php vista('modelos',   ['s' => $c['modelos']]); ?>
+        <?php vista('que-es',       ['s' => $c['que_es']]); ?>
+        <?php vista('suscripciones', ['s' => $c['suscripciones']]); ?>
+        <?php vista('modelos',       ['s' => $c['modelos']]); ?>
         <?php vista('ventajas',  ['s' => $c['ventajas']]); ?>
         <?php vista('infraestructura', ['s' => $c['infraestructura']]); ?>
         <?php vista('datos',     ['s' => $c['datos']]); ?>
-        <?php vista('modelos',   ['s' => $c['modelos']]); ?>
         <?php vista('servicios', ['s' => $c['servicios']]); ?>
        
         <?php vista('seguridad', ['s' => $c['seguridad']]); ?>

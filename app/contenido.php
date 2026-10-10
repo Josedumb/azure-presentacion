@@ -22,6 +22,45 @@ return [
         ],
     ],
 
+    'suscripciones' => [
+        'titulo' => 'Tipos de suscripción de Azure y sus precios',
+        'lead'   => 'Modelos de suscripción según el perfil del usuario: desde cuentas de prueba y estudiantes hasta acuerdos corporativos a gran escala.',
+        'items'  => [
+            [
+                'sigla'   => 'Gratuito',
+                'nombre'  => 'Azure gratuito (Free Account)',
+                'precio'  => 'US$0 para comenzar',
+                'detalle' => 'Crédito inicial de US$200 por 30 días.',
+                'texto'   => 'Incluye cantidades gratuitas de determinados servicios durante 12 meses y otros permanentemente. Al terminar el crédito, debes cambiar a una suscripción de pago para continuar usando los servicios.',
+                'pie'     => 'Microsoft Azure',
+            ],
+            [
+                'sigla'   => 'Consumo',
+                'nombre'  => 'Pago por uso (Pay-As-You-Go)',
+                'precio'  => 'Sin cuota fija obligatoria',
+                'detalle' => 'Pagas según los recursos que consumas.',
+                'texto'   => 'El precio depende de las máquinas virtuales, bases de datos, almacenamiento y otros servicios. Puede costar desde centavos hasta cientos o miles de dólares mensuales.',
+                'pie'     => 'Microsoft',
+            ],
+            [
+                'sigla'   => 'Estudiantes',
+                'nombre'  => 'Azure for Students',
+                'precio'  => 'US$0 para estudiantes elegibles',
+                'detalle' => 'Crédito de US$100 por 12 meses.',
+                'texto'   => 'Permite practicar con servicios de Azure sin pagar mientras tengas crédito disponible y respetes los límites de la oferta. Está dirigido a estudiantes que cumplen los requisitos académicos.',
+                'pie'     => 'Microsoft Learn',
+            ],
+            [
+                'sigla'   => 'Empresarial',
+                'nombre'  => 'Suscripciones empresariales',
+                'precio'  => 'Precio personalizado',
+                'detalle' => 'Para múltiples servicios y licencias.',
+                'texto'   => 'Para empresas que necesitan administrar múltiples servicios, licencias, presupuestos y contratos. El costo depende del acuerdo comercial y del consumo; no existe una tarifa única para todas las empresas.',
+                'pie'     => 'Enterprise Agreement',
+            ],
+        ],
+    ],
+
     'infraestructura' => [
         'titulo' => 'Infraestructura: cómputo, contenedores y redes',
         'texto'  => 'Dónde y cómo vive la aplicación dentro de Azure: del servicio que la hospeda a la red que la conecta.',

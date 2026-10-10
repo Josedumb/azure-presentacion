@@ -171,6 +171,64 @@ a { color: inherit; text-decoration: none; }
 .pie { padding: 40px 0; font-size: 13px; color: var(--texto-tenue); }
 .pie__fila { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
 
+/* ---------- Tarjetas de suscripción ---------- */
+.suscripcion-card {
+    position: relative;
+    background: var(--fondo-elevado);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 28px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color .3s ease, transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s ease, background .3s ease;
+    overflow: hidden;
+}
+.suscripcion-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--acento), transparent);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.suscripcion-card:hover::before { opacity: 1; }
+.suscripcion-card:hover {
+    border-color: var(--acento);
+    transform: translateY(-4px);
+    background: linear-gradient(180deg, var(--acento-suave), var(--fondo-elevado) 65%);
+    box-shadow: 0 12px 30px -8px rgba(59, 156, 255, 0.3), 0 0 0 1px rgba(59, 156, 255, 0.2), var(--sombra);
+}
+.suscripcion-card__num {
+    font-family: var(--fuente-mono);
+    font-size: 11px;
+    color: var(--texto-tenue);
+    letter-spacing: .1em;
+    margin-bottom: 6px;
+}
+.suscripcion-card__precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--acento);
+    letter-spacing: -0.01em;
+    margin: 6px 0 2px;
+}
+.suscripcion-card__detalle {
+    font-size: 13px;
+    color: var(--texto-suave);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+.suscripcion-card:hover .tarjeta__sigla {
+    background: rgba(59, 156, 255, 0.22);
+    box-shadow: 0 0 12px rgba(59, 156, 255, 0.35);
+    color: #ffffff;
+}
+.suscripcion-card:hover .tarjeta__titulo { color: #ffffff; }
+.suscripcion-card:hover .tarjeta__pie { border-color: rgba(59, 156, 255, 0.25); }
+
 /* ---------- Animación al hacer scroll ---------- */
 .revelar { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .revelar.visible { opacity: 1; transform: none; }

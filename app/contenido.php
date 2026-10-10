@@ -154,6 +154,14 @@ return [
             '    --access-tier Hot \\',
             '    --min-tls-version TLS1_2 \\',
             '    --allow-blob-public-access false',
+        'seguridad' => [
+        'titulo' => 'Seguridad proactiva e identidad',
+        'texto'  => 'Para cerrar el ciclo, se protege el entorno: quién accede, dónde viven los secretos y cómo se detectan vulnerabilidades antes de desplegar.',
+        'items'  => [
+            ['categoria' => 'Identidad',  'nombre' => 'Microsoft Entra ID', 'texto' => 'Control de accesos centralizado: inicio de sesión único, MFA, roles (RBAC) y acceso condicional para usuarios y aplicaciones.'],
+            ['categoria' => 'Secretos',   'nombre' => 'Azure Key Vault',    'texto' => 'Bóveda para variables de entorno, claves y certificados. App Service los lee con una identidad administrada, sin guardarlos en el código.'],
+            ['categoria' => 'Código',     'nombre' => 'GitHub Advanced Security', 'texto' => 'Escaneo del código fuente: detecta vulnerabilidades (CodeQL), dependencias inseguras y secretos expuestos en cada push.'],
+            ['categoria' => 'Pipeline',   'nombre' => 'Gitleaks',           'texto' => 'Se ejecuta en GitHub Actions y bloquea el despliegue si encuentra contraseñas o tokens en el repositorio.'],
         ],
     ],
 

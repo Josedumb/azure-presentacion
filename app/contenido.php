@@ -154,7 +154,10 @@ return [
             '    --access-tier Hot \\',
             '    --min-tls-version TLS1_2 \\',
             '    --allow-blob-public-access false',
-        'seguridad' => [
+        ],
+    ],
+
+    'seguridad' => [
         'titulo' => 'Seguridad proactiva e identidad',
         'texto'  => 'Para cerrar el ciclo, se protege el entorno: quién accede, dónde viven los secretos y cómo se detectan vulnerabilidades antes de desplegar.',
         'items'  => [

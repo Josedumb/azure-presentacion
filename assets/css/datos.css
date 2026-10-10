@@ -1,0 +1,85 @@
+/* =========================================================
+   SECCIÓN 03 — DATOS Y ALMACENAMIENTO
+   Solo afecta a esta sección: todas las clases usan el prefijo dt-
+   y los colores salen de tokens.css.
+   ========================================================= */
+
+/* ---------- Grupos ---------- */
+.dt-grupo + .dt-grupo { margin-top: 56px; }
+.dt-grupo__titulo {
+    font-family: var(--fuente-mono); font-size: 12px;
+    text-transform: uppercase; letter-spacing: .08em; color: var(--texto-tenue);
+}
+.dt-ayuda { text-transform: none; letter-spacing: 0; color: var(--acento); }
+.dt-rejilla { margin-top: 16px; align-items: start; }
+
+/* ---------- Recuadro desplegable ---------- */
+.dt-card { padding: 0; }
+.dt-card.abierta { border-color: var(--acento); }
+.dt-card__h { font: inherit; }
+.dt-card__cabeza {
+    all: unset; box-sizing: border-box; cursor: pointer;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    width: 100%; min-height: 96px; padding: 24px;
+}
+.dt-card__cabeza:focus-visible { outline: 2px solid var(--acento); outline-offset: -2px; border-radius: var(--radio); }
+.dt-card__titulos { display: flex; flex-direction: column; }
+.dt-card__titulos .servicio__nombre { margin-bottom: 0; }
+.dt-card__icono {
+    flex: none; display: grid; place-items: center;
+    width: 26px; height: 26px; border-radius: 50%;
+    border: 1px solid var(--borde-fuerte);
+    font-family: var(--fuente-mono); font-size: 15px; color: var(--texto-suave);
+    transition: transform .25s, border-color .2s, color .2s;
+}
+.dt-card__cabeza:hover .dt-card__icono { border-color: var(--acento); color: var(--acento); }
+.dt-card.abierta .dt-card__icono { transform: rotate(45deg); border-color: var(--acento); color: var(--acento); }
+
+/* ---------- Detalle ----------
+   Dentro del recuadro está oculto. Al abrirlo, datos.js lo mueve debajo de la fila
+   para que ocupe todo el ancho sin mover los demás recuadros. */
+.dt-card__detalle { display: none; }
+.dt-rejilla > .dt-card__detalle {
+    display: grid; grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px; align-items: center; padding: 24px;
+    background: var(--fondo-elevado); border: 1px solid var(--acento); border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    animation: dt-aparecer .35s ease both;
+}
+.dt-card__detalle .servicio__cat { display: block; margin-bottom: 10px; color: var(--acento); }
+
+.dt-grafico {
+    padding: 16px;
+    border: 1px solid var(--borde); border-radius: var(--radio-chico); background: var(--fondo);
+}
+@keyframes dt-aparecer { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Dibujos SVG ---------- */
+.dt-svg { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; font-family: var(--fuente-mono); font-size: 9px; }
+.dt-svg text { fill: var(--texto-suave); }
+.dt-svg .tt  { fill: var(--texto); font-weight: 500; }
+.dt-svg .ta  { fill: var(--acento); }
+.dt-svg .tn  { fill: var(--texto-tenue); }
+.dt-svg .tok { fill: var(--exito); }
+.dt-svg .s   { font-size: 8px; }
+.dt-svg .c   { fill: var(--superficie); stroke: var(--borde-fuerte); }
+.dt-svg .ca  { fill: var(--acento-suave); stroke: var(--acento); }
+.dt-svg .cs  { fill: var(--superficie); stroke: var(--acento); }
+.dt-svg .bg  { fill: var(--fondo); }
+.dt-svg .ln  { fill: none; stroke: var(--borde-fuerte); }
+.dt-svg .la  { fill: none; stroke: var(--acento); }
+.dt-svg .pt  { stroke-dasharray: 3 3; }
+.dt-svg .ba, .dt-svg .cp { fill: var(--acento); }
+.dt-svg .bt  { fill: var(--texto-tenue); }
+.dt-svg .ok  { fill: var(--exito); }
+.dt-svg .ko  { fill: var(--peligro); }
+.dt-flecha-punta { fill: var(--acento); }
+
+@media (max-width: 640px) {
+    .dt-rejilla > .dt-card__detalle { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dt-card__icono { transition: none; }
+    .dt-rejilla > .dt-card__detalle { animation: none; }
+}

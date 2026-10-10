@@ -6,7 +6,7 @@
 return [
     'sitio' => [
         'titulo'   => 'Microsoft Azure',
-        'subtitulo'=> 'La nube de Microsoft, explicada en una sola página.',
+        'subtitulo'=> 'La plataforma de computación en la nube abierta y flexible',
         'curso'    => 'Exposición — Ingeniería en Sistemas, UMG',
     ],
 
@@ -47,7 +47,7 @@ return [
                 'sigla' => 'PaaS',
                 'nombre'=> 'Plataforma como servicio',
                 'texto' => 'Microsoft administra la infraestructura y el sistema operativo; el cliente solo pone su código y sus datos.',
-                'ejemplo' => 'Azure App Service (donde corre esta misma página)',
+                'ejemplo' => 'Azure App Service, Azure SQL Database',
             ],
             [
                 'sigla' => 'SaaS',

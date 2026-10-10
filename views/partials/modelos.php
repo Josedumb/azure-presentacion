@@ -5,7 +5,7 @@
 
         <div class="rejilla rejilla--3">
             <?php foreach ($s['items'] as $m): ?>
-                <article class="tarjeta <?= $m['sigla'] === 'PaaS' ? 'tarjeta--destacada' : '' ?>">
+                <article class="tarjeta">
                     <span class="tarjeta__sigla"><?= e($m['sigla']) ?></span>
                     <h3 class="tarjeta__titulo"><?= e($m['nombre']) ?></h3>
                     <p class="tarjeta__texto"><?= e($m['texto']) ?></p>

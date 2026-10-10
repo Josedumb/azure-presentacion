@@ -1,6 +1,6 @@
 <section id="ventajas" class="seccion revelar">
     <div class="contenedor">
-        <p class="seccion__num">05</p>
+        <p class="seccion__num">03</p>
         <h2 class="seccion__titulo"><?= e($s['titulo']) ?></h2>
 
         <div class="rejilla rejilla--2">

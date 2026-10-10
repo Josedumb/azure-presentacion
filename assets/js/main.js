@@ -20,7 +20,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar simulador de pipeline CI/CD
     iniciarSimuladorPipeline();
+
+    // Efecto interactivo 3D para el emblema de Azure en el Hero
+    iniciarParallaxEmblemaHero();
 });
+
+/**
+ * Efecto de inclinación y parallax 3D interactivo en el emblema de Azure al mover el cursor en el Hero.
+ */
+function iniciarParallaxEmblemaHero() {
+    const hero = document.getElementById('inicio');
+    const wrapper = document.getElementById('hero-emblema-wrapper');
+    if (!hero || !wrapper) return;
+
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        const tiltX = -y * 16;
+        const tiltY = x * 16;
+        const moveX = x * 12;
+        const moveY = y * 12;
+
+        wrapper.style.transform = `perspective(800px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translate3d(${moveX.toFixed(1)}px, ${moveY.toFixed(1)}px, 0)`;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        wrapper.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        wrapper.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0)';
+        setTimeout(() => {
+            wrapper.style.transition = '';
+        }, 600);
+    });
+
+    hero.addEventListener('mouseenter', () => {
+        wrapper.style.transition = 'transform 0.15s ease-out';
+    });
+}
 
 /**
  * Lógica interactiva para la simulación del Pipeline CI/CD hacia Azure.

@@ -26,9 +26,7 @@
         <?php vista('infraestructura', ['s' => $c['infraestructura']]); ?>
         <?php vista('devops', ['s' => $c['devops']]); ?>
         <?php vista('datos', ['s' => $c['datos']]); ?>
-        <?php vista('servicios', ['s' => $c['servicios']]); ?>
         <?php vista('seguridad', ['s' => $c['seguridad']]); ?>
-        <?php vista('demo', ['s' => $c['demo'], 'servidor' => $servidor]); ?>
     </main>
     <?php vista('footer', ['c' => $c]); ?>
     <script src="assets/js/main.js?v=<?= filemtime(__DIR__ . '/../assets/js/main.js') ?>" defer></script>

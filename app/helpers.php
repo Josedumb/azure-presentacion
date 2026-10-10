@@ -9,15 +9,30 @@ function e(string $texto): string
     return htmlspecialchars($texto, ENT_QUOTES, 'UTF-8');
 }
 
-/** Carga una vista parcial pasándole variables. */
+/**
+ * Carga una vista parcial pasándole variables.
+ * Numera las secciones solas en el orden en que aparecen en layout.php:
+ * el número escrito en cada vista se reemplaza, así nadie renumera a mano
+ * al agregar una sección y nunca se repite.
+ */
 function vista(string $nombre, array $datos = []): void
 {
+    static $seccion = 0;
+
     $ruta = __DIR__ . '/../views/partials/' . $nombre . '.php';
     if (!is_file($ruta)) {
         throw new RuntimeException("Vista no encontrada: {$nombre}");
     }
     extract($datos, EXTR_SKIP);
+    ob_start();
     require $ruta;
+    echo preg_replace_callback(
+        '/(<p class="seccion__num">)\d+(<\/p>)/',
+        function (array $m) use (&$seccion): string {
+            return $m[1] . sprintf('%02d', ++$seccion) . $m[2];
+        },
+        ob_get_clean()
+    );
 }
 
 /** Devuelve información del servidor para mostrar en la demo. */

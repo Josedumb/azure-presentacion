@@ -20,6 +20,8 @@
         <?php vista('ventajas',  ['s' => $c['ventajas']]); ?>
         <?php vista('infraestructura', ['s' => $c['infraestructura']]); ?>
         <?php vista('servicios', ['s' => $c['servicios']]); ?>
+        <?php vista('ventajas',  ['s' => $c['ventajas']]); ?>
+        <?php vista('seguridad', ['s' => $c['seguridad']]); ?>
         <?php vista('demo',      ['s' => $c['demo'], 'servidor' => $servidor]); ?>
     </main>
     <?php vista('footer', ['c' => $c]); ?>

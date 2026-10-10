@@ -13,5 +13,8 @@
                 </article>
             <?php endforeach; ?>
         </div>
+        <?php if (!empty($s['cierre'])): ?>
+            <p class="seccion__lead" style="margin-top: 32px; margin-bottom: 0;"><?= e($s['cierre']) ?></p>
+        <?php endif; ?>
     </div>
 </section>

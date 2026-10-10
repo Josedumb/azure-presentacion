@@ -12,7 +12,8 @@ return [
 
     'que_es' => [
         'titulo' => '¿Qué es Azure?',
-        'texto'  => 'Azure es la plataforma de computación en la nube de Microsoft. Ofrece cientos de servicios —servidores virtuales, bases de datos, almacenamiento, redes, inteligencia artificial— que se rentan por uso, sin comprar ni mantener hardware propio. Fue lanzada en 2010 como "Windows Azure" y hoy es uno de los tres grandes proveedores de nube junto a AWS y Google Cloud.',
+        'texto'  => 'Azure es la plataforma de servicios en la nube de Microsoft. Ofrece cómputo, almacenamiento, redes, bases de datos, inteligencia artificial y más, desde centros de datos repartidos por el mundo, accesibles por internet.',
+        'pago_por_uso' => 'Solo se paga lo que se consume (horas de cómputo, GB almacenados, transacciones). No hay inversión inicial en servidores, se puede subir o bajar recursos según la demanda y apagar lo que no se usa para dejar de pagarlo. Existe una capa gratuita para probar.',
         'datos'  => [
             ['valor' => '2010', 'etiqueta' => 'Año de lanzamiento'],
             ['valor' => '60+',  'etiqueta' => 'Regiones en el mundo'],
@@ -34,24 +35,25 @@ return [
 
     'modelos' => [
         'titulo' => 'Modelos de servicio',
+        'cierre' => 'En resumen de IaaS a SaaS se gana comodidad (menos que administrar) y se pierde control.',
         'items'  => [
             [
                 'sigla' => 'IaaS',
                 'nombre'=> 'Infraestructura como servicio',
-                'texto' => 'Rentas la máquina virtual, la red y el disco. Tú instalas y administras el sistema operativo y todo lo demás.',
+                'texto' => 'Microsoft da servidores virtuales, redes y almacenamiento; el cliente administra el sistema operativo, las aplicaciones y los datos.',
                 'ejemplo' => 'Azure Virtual Machines',
             ],
             [
                 'sigla' => 'PaaS',
                 'nombre'=> 'Plataforma como servicio',
-                'texto' => 'Azure administra el servidor y el sistema operativo. Tú solo subes tu código. Es lo que usamos en la demostración.',
-                'ejemplo' => 'Azure App Service',
+                'texto' => 'Microsoft administra la infraestructura y el sistema operativo; el cliente solo pone su código y sus datos.',
+                'ejemplo' => 'Azure App Service (donde corre esta misma página)',
             ],
             [
                 'sigla' => 'SaaS',
                 'nombre'=> 'Software como servicio',
-                'texto' => 'Usas una aplicación terminada desde el navegador, sin administrar nada de la infraestructura.',
-                'ejemplo' => 'Microsoft 365, Outlook',
+                'texto' => 'Aplicación completa lista para usar; el cliente solo la configura y la usa.',
+                'ejemplo' => 'Microsoft 365',
             ],
         ],
     ],
@@ -73,17 +75,18 @@ return [
     'ventajas' => [
         'titulo' => 'Ventajas y desventajas',
         'pros' => [
-            'Escalabilidad: subir o bajar recursos en minutos.',
-            'Pago por uso: no hay inversión inicial en hardware.',
-            'Integración nativa con Windows, Office y Visual Studio.',
-            'Presencia global y alta disponibilidad.',
-            'Cuenta gratuita y créditos para estudiantes.',
+            'Sin gasto inicial en hardware: se pasa de inversión a gasto por consumo.',
+            'Escalabilidad rápida según la demanda.',
+            'Alta disponibilidad y presencia global.',
+            'Mantenimiento, parches y actualizaciones a cargo del proveedor.',
+            'Seguridad y certificaciones de cumplimiento incluidas.',
+            'Despliegue en minutos, como esta página desde GitHub.',
         ],
         'contras' => [
-            'Costos difíciles de predecir si no se monitorean.',
-            'Curva de aprendizaje por la cantidad de servicios.',
-            'Dependencia del proveedor (vendor lock-in).',
-            'Requiere conexión a internet estable.',
+            'Vendor lock-in: al usar servicios propios de Azure, migrar a otro proveedor se vuelve costoso y lento.',
+            'Los costos pueden dispararse si no se monitorean los recursos.',
+            'Dependencia de la conexión a internet y de la disponibilidad del proveedor.',
+            'Menos control sobre la infraestructura en PaaS y SaaS.',
         ],
     ],
 

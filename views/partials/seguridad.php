@@ -1,6 +1,6 @@
-<section id="infraestructura" class="seccion revelar">
+<section id="seguridad" class="seccion revelar">
     <div class="contenedor">
-        <p class="seccion__num">04</p>
+        <p class="seccion__num">06</p>
         <h2 class="seccion__titulo"><?= e($s['titulo']) ?></h2>
         <p class="seccion__lead"><?= e($s['texto']) ?></p>
 

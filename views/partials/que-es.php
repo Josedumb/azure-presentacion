@@ -3,6 +3,9 @@
         <p class="seccion__num">01</p>
         <h2 class="seccion__titulo"><?= e($s['titulo']) ?></h2>
         <p class="seccion__lead"><?= e($s['texto']) ?></p>
+        <?php if (!empty($s['pago_por_uso'])): ?>
+            <p class="seccion__lead"><?= e($s['pago_por_uso']) ?></p>
+        <?php endif; ?>
 
         <div class="datos">
             <?php foreach ($s['datos'] as $d): ?>

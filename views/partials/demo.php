@@ -19,7 +19,7 @@
         <!-- Prueba en vivo: estos datos los genera PHP en el servidor donde corre la página -->
         <div class="terminal" role="region" aria-label="Información del servidor">
             <div class="terminal__barra">
-                <span></span><span></span><span></span>
+                <span class="terminal__punto"></span><span class="terminal__punto"></span><span class="terminal__punto"></span>
                 <p>php info — generado en el servidor</p>
             </div>
             <pre class="terminal__cuerpo"><?php foreach ($servidor as $clave => $valor): ?><span class="t-clave"><?= e(str_pad($clave, 9)) ?></span> <span class="t-valor"><?= e((string) $valor) ?></span><?= "\n" ?><?php endforeach; ?></pre>

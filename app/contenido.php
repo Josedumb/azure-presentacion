@@ -72,6 +72,56 @@ return [
         ],
     ],
 
+    'devops' => [
+        'titulo' => 'Cultura DevOps y CI/CD: Conectando el código con la nube',
+        'texto'  => 'DevOps conecta el código con la infraestructura en la nube. Permite orquestar todo el ciclo de vida del software: desde la gestión de proyectos con Azure DevOps, la creación de pipelines automatizados para compilación y pruebas continuas, hasta el almacenamiento seguro de imágenes en Azure Container Registry y su despliegue.',
+        'items'  => [
+            [
+                'categoria' => 'Gestión de proyectos (ALM)',
+                'nombre'    => 'Azure DevOps',
+                'texto'     => 'Orquesta el ciclo de vida del software con Azure Boards para tableros ágiles y Azure Repos para control de versiones Git colaborativo y trazable.',
+            ],
+            [
+                'categoria' => 'Integración Continua (CI)',
+                'nombre'    => 'Pipelines Automatizados',
+                'texto'     => 'Compilación automática y ejecución de pruebas unitarias ante cada cambio de código, garantizando calidad antes del despliegue.',
+            ],
+            [
+                'categoria' => 'Almacenamiento Seguro',
+                'nombre'    => 'Azure Container Registry',
+                'texto'     => 'Registro privado (ACR) para almacenar, versionar y escanear imágenes de contenedores Docker de forma segura para App Service y AKS.',
+            ],
+            [
+                'categoria' => 'Entrega Continua (CD)',
+                'nombre'    => 'Despliegue a la Nube',
+                'texto'     => 'Conecta el código validado con la nube desplegando automáticamente a producción sin caídas de servicio ni intervención manual.',
+            ],
+        ],
+        'pipeline' => [
+            ['paso' => '[01. Plan & Repos]  ', 'estado' => '✔ OK      ', 'detalle' => 'Azure Boards & Git Repos — Gestión ágil y código versionado'],
+            ['paso' => '[02. Build & Test]  ', 'estado' => '✔ PASADO  ', 'detalle' => 'Azure Pipelines — Compilación y pruebas unitarias continuas'],
+            ['paso' => '[03. Imagen Docker] ', 'estado' => '✔ CREADA  ', 'detalle' => 'Docker Build — Empaquetado portátil de la aplicación'],
+            ['paso' => '[04. Registro ACR]  ', 'estado' => '✔ SEGURO  ', 'detalle' => 'Azure Container Registry — Almacenamiento seguro de imágenes'],
+            ['paso' => '[05. CD a la Nube]  ', 'estado' => '✔ EN VIVO ', 'detalle' => 'Despliegue automatizado hacia Azure App Service / AKS'],
+        ],
+        'simulador' => [
+            'titulo' => 'Simulador en vivo: Ciclo de vida y despliegue automatizado',
+            'subtitulo' => 'Escribe un cambio o selecciona un commit para ver cómo se orquesta la compilación, pruebas y entrega continua hacia Azure.',
+            'presets' => [
+                'feat: se crea vista de cicd y simulador interactivo',
+                'fix: optimización de tiempos de respuesta en App Service',
+                'refactor: actualización de imagen Docker en Azure Container Registry',
+            ],
+            'etapas' => [
+                ['id' => 'step-repo',   'num' => '01', 'nombre' => 'Git Push',      'sub' => 'Azure Repos'],
+                ['id' => 'step-ci',     'num' => '02', 'nombre' => 'CI & Pruebas',  'sub' => 'Azure Pipelines'],
+                ['id' => 'step-docker', 'num' => '03', 'nombre' => 'Docker Build',  'sub' => 'Empaquetado'],
+                ['id' => 'step-acr',    'num' => '04', 'nombre' => 'Push a ACR',    'sub' => 'Registro seguro'],
+                ['id' => 'step-cd',     'num' => '05', 'nombre' => 'CD en Nube',    'sub' => 'App Service Live'],
+            ],
+        ],
+    ],
+
     'modelos' => [
         'titulo' => 'Modelos de servicio',
         'cierre' => 'En resumen de IaaS a SaaS se gana comodidad (menos que administrar) y se pierde control.',
@@ -94,20 +144,6 @@ return [
                 'texto' => 'Aplicación completa lista para usar; el cliente solo la configura y la usa.',
                 'ejemplo' => 'Microsoft 365',
             ],
-        ],
-    ],
-
-    'servicios' => [
-        'titulo' => 'Servicios principales',
-        'items'  => [
-            ['categoria' => 'Cómputo',        'nombre' => 'Virtual Machines',    'texto' => 'Servidores Windows o Linux bajo demanda.'],
-            ['categoria' => 'Web',            'nombre' => 'App Service',         'texto' => 'Hospeda aplicaciones web en PHP, .NET, Node, Python o Java.'],
-            ['categoria' => 'Almacenamiento', 'nombre' => 'Blob Storage',        'texto' => 'Archivos, imágenes y respaldos a gran escala.'],
-            ['categoria' => 'Bases de datos', 'nombre' => 'Azure SQL / Cosmos DB','texto' => 'Bases relacionales y NoSQL administradas.'],
-            ['categoria' => 'Redes',          'nombre' => 'Virtual Network',     'texto' => 'Redes privadas, subredes, VPN y balanceadores.'],
-            ['categoria' => 'Contenedores',   'nombre' => 'AKS',                 'texto' => 'Kubernetes administrado para microservicios.'],
-            ['categoria' => 'Identidad',      'nombre' => 'Microsoft Entra ID',  'texto' => 'Usuarios, inicio de sesión único y control de acceso.'],
-            ['categoria' => 'IA',             'nombre' => 'Azure AI Services',   'texto' => 'Visión, voz, traducción y modelos de lenguaje.'],
         ],
     ],
 
@@ -210,19 +246,7 @@ return [
         ],
     ],
 
-    'demo' => [
-        'titulo' => 'La demostración',
-        'texto'  => 'Esta misma página es la demo: un repositorio Git con PHP que se despliega en Azure App Service.',
-        'pasos'  => [
-            ['n' => '01', 'titulo' => 'Repositorio Git',  'texto' => 'Creamos el proyecto PHP y lo versionamos con Git en GitHub.'],
-            ['n' => '02', 'titulo' => 'App Service',      'texto' => 'En el portal de Azure creamos una Web App con pila PHP 8.x.'],
-            ['n' => '03', 'titulo' => 'Centro de implementación', 'texto' => 'Conectamos la Web App al repositorio de GitHub.'],
-            ['n' => '04', 'titulo' => 'Despliegue',       'texto' => 'Cada git push a main publica automáticamente la nueva versión.'],
-        ],
-    ],
-
     'equipo' => [
-        'Jose Aguilar',
-        'Compañero',
+        'Grupo 8',
     ],
 ];
